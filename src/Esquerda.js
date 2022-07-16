@@ -1,3 +1,5 @@
+import React from "react"
+
 const apistories = [
     {imagem: "assets/img/9gag.svg", usuario: "9gag"},
     {imagem: "assets/img/meowed.svg", usuario: "meowed"},
@@ -39,6 +41,18 @@ function Story(props){
 }
 
 function Post(props){
+
+  const [icone, setIcone] = React.useState("heart-outline");
+  const [cor, setCor] = React.useState("")
+  function curtir(){
+    if (icone === "heart-outline"){
+      return setIcone("heart-sharp"),setCor("color: Crimson;"); 
+    }else 
+    setIcone("heart-outline")
+    setCor(" ");
+  }
+
+
     return(
         <div class="post">
               <div class="topo">
@@ -58,7 +72,7 @@ function Post(props){
               <div class="fundo">
                 <div class="acoes">
                   <div>
-                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon Style={cor} onClick={curtir} name={icone}></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                   </div>
