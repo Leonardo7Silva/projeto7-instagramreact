@@ -66,7 +66,7 @@ function Post(props){
               </div>
 
               <div class="conteudo">
-                <img src={props.imagemPost} />
+                <img onDoubleClick={curtir} src={props.imagemPost} />
               </div>
 
               <div class="fundo">

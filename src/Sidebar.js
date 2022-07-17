@@ -1,3 +1,5 @@
+import React from "react"
+
 const apiusuario = [{
     imgUsuario: "assets/img/catanacomics.svg",
     usuario: "catanacomics",
@@ -7,27 +9,34 @@ const apiusuario = [{
 const sugestoes = [
     {usuario: "bad.vibes.memes",
     imgUsuario: "assets/img/bad.vibes.memes.svg",
-    estado: "Segue você"},
+    estado: "Segue você",
+    estado2: "Seguir"},
 
     {usuario: "chibirdart",
     imgUsuario: "assets/img/chibirdart.svg",
-    estado: "Segue você"},
+    estado: "Segue você",
+    estado2: "Seguir"},
 
     {usuario: "razoesparaacreditar",
     imgUsuario: "assets/img/razoesparaacreditar.svg",
-    estado: "Novo no Instagram"},
+    estado: "Novo no Instagram",
+    estado2: "Seguir"},
 
     {usuario: "adorable_animals",
     imgUsuario: "assets/img/adorable_animals.svg",
-    estado: "Segue você"},
+    estado: "Segue você",
+    estado2: "Seguir"},
 
     {usuario: "smallcutecats",
     imgUsuario: "assets/img/smallcutecats.svg",
-    estado: "Segue você"}
+    estado: "Segue você",
+    estado2: "Seguir"}
 
 ]
 
-function Sugestao(props){
+function SideBar() {
+
+  function Sugestao(props){
     return(
         <div class="sugestao">
         <div class="usuario">
@@ -38,12 +47,11 @@ function Sugestao(props){
           </div>
         </div>
 
-        <div class="seguir">Seguir</div>
+        <div class="seguir">{props.estado2}</div>
       </div>
     );
 }
 
-function SideBar() {
     return(
         <div class="sidebar">
           <div class="usuario">
@@ -65,6 +73,7 @@ function SideBar() {
                     usuario={value.usuario}
                     imgUsuario = {value.imgUsuario}
                     estado = {value.estado}
+                    estado2 = {value.estado2}
                 />
             ))}
           </div>

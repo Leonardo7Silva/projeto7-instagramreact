@@ -323,6 +323,10 @@ body {
   color: crimson;
 }
 
+.conteudo img:hover{
+  cursor: pointer;
+}
+
 @media (max-width: 935px) {
   .sidebar {
     display: none;
